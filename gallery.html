@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gallery</title>
+<link rel="stylesheet" type="text/css" href="gallerystyle.css">
+<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div>
+   
+   
+   <div class="header">
+        <div class="wrapper">
+           <div class="logo">
+	         <img src="new.png" weight: 150px; height: 260px;><h1><span style="color:#b99d59;">sandy</span>gree</h1>
+	       </div>	
+	      </div>
+	 
+	     <div class="nav-area">
+	      <ul>
+            <li><i class="fa fa-home"></i><a href="index.html">HOME</a></li>
+            <li><i class="fa fa-user"></i><a href="aboutus.html">ABOUTUS</a></li>
+           <li><i class="fa fa-picture-o"></i><a href="contact.html">CONTACT</a></li>
+           <li><i class="fa fa-rss-square"></i><a href="https://www.blogger.com/blogger.g?blogID=7889541851671757007#allposts ">BLOGS</a></li>
+          </ul>
+	    </div>
+
+    </div>
+	
+	
+	<div id="myBtnContainer">
+        <button class="btn active" style="font-family: 'Unica One', cursive; font-size: 23px;" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" style="font-family: 'Unica One', cursive; font-size: 20px;" onclick="filterSelection('Trees')"> Trees</button>
+        <button class="btn" style="font-family: 'Unica One', cursive; font-size: 20px;" onclick="filterSelection('Plants')"> Plants</button>
+         <button class="btn" style="font-family: 'Unica One', cursive; font-size: 20px;" onclick="filterSelection('Poultary')"> Poultary</button>
+    </div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column Trees">
+    <div class="content">
+      <img src="chikoo.jpg" alt="Mountains" style="width:100%">
+      <h4>Chikoo Tree</h4>
+    </div>
+  </div>
+  <div class="column Trees">
+    <div class="content">
+      <img src="pomo.jpg" alt="Mountains" style="width:100%">
+      <h4>Pomegranate Tree</h4>
+    </div>
+  </div>
+  <div class="column Trees">
+    <div class="content">
+      <img src="guava.jpg" alt="Mountains" style="width:100%">
+      <h4>Guava Tree</h4>
+    </div>
+  </div>
+  <div class="column Trees">
+    <div class="content">
+      <img src="papaya.jpg" alt="Mountains" style="width:100%">
+      <h4>Papaya Tree</h4>
+    </div>
+  </div>
+  <div class="column Plants">
+    <div class="content">
+      <img src="tomato.jpg" alt="Mountains" style="width:100%">
+      <h4>Tomato</h4>
+    </div>
+  </div>
+  <div class="column Plants">
+    <div class="content">
+      <img src="curry.jpg" alt="Mountains" style="width:100%">
+      <h4>Curry Plant</h4>
+    </div>
+  </div>
+  <div class="column Plants">
+    <div class="content">
+      <img src="brinjal.jpg" alt="Mountains" style="width:100%">
+      <h4>Brinjal Plant</h4>
+    </div>
+  </div>
+  <div class="column Plants">
+    <div class="content">
+      <img src="mint.jpg" alt="Mountains" style="width:100%">
+      <h4>Mint Leave</h4>
+    </div>
+  </div>
+  
+  <div class="column Plants">
+    <div class="content">
+      <img src="radish.jpg" alt="Mountains" style="width:100%">
+      <h4>Radish</h4>
+    </div>
+  </div>
+  <div class="column Plants">
+    <div class="content">
+      <img src="ginger.jpg" alt="Mountains" style="width:100%">
+      <h4>Ginger</h4>
+    </div>
+  </div>
+  <div class="column Plants">
+    <div class="content">
+      <img src="potato.jpg" alt="Mountains" style="width:100%">
+      <h4>Potato</h4>
+    </div>
+  </div>
+  <div class="column Poultary">
+    <div class="content">
+      <img src="hen.jpg" alt="Mountains" style="width:100%">
+      <h4>Hen</h4>
+    </div>
+  </div>
+  <div class="column Poultary">
+    <div class="content">
+      <img src="cock2.jpg" alt="Mountains" style="width:100%">
+      <h4>Cock</h4>
+    </div>
+  </div>
+  <div class="column Poultary">
+    <div class="content">
+      <img src="hen1.jpg" alt="Mountains" style="width:100%">
+      <h4>Poultary Farming</h4>
+    </div>
+  </div>
+  <div class="column Poultary">
+    <div class="content">
+      <img src="egg.jpg" alt="Mountains" style="width:100%">
+      <h4>Egg</h4>
+    </div>
+  </div>
+</div>  
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<footer class="footer-disp" style="padding-bottom: 8px;">
+	
+	<div class="footer-left">
+	   <h3 style="font-family: 'Indie Flower', cursive;">sandygree<span>.co.in</span></h3>
+	   <p class="footer-links">
+	   <a href="index.html">HOME.</a>  <a href="aboutus.html">ABOUTUS.</a> <a href="gallery.html">GALLERY.</a><br>
+	   <a href="https://www.blogger.com/blogger.g?blogID=7889541851671757007#allposts">BLOGS.</a> <a href="contact.html">CONTACT.</a>
+	   </p>
+	   
+	</div>
+	
+	<div class="footer-center">
+	
+	    <div>
+		<i class="fa fa-map-marker"></i>
+		<p><span>21 Meera Bawa Street,</span> karur, TamilNadu</p>
+		</div>
+ 
+		<div>
+		<i class="fa fa-phone"></i>
+		<p>+91 95868 56875</p>
+		</div>
+ 
+		<div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="mailto:support@company.com">sandygreehelp@gmail.com</a></p>
+		</div>
+	</div>
+	<div class="footer-right">
+	    
+	    <h3 id="footer-h3"><span>About the company</span></h3><br>
+		<p class="footer-about">
+	    Greens is a source for organic gardening,<br> 
+		poultry farming & nursery.
+	    </p>
+	<div class="footer-icons" style="word-spacing: 25px;">
+ 
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-linkedin"></i></a>
+		<a href="#"><i class="fa fa-github"></i></a>
+ 
+	</div>
+	</div>
+	<p class="footer-companyname" style="text-align: center; padding-top: 40px; font-size: 15px; padding-bottom: 0px;">Copyright @2020 Sandygree.All Rights Reserved<br>
+Disclaimer: Sandygree does not represent or endorse the accuracy or reliability of any of the information.</p>
+	</footer>	
+	
+</div>
+</body>
+</head>
+</html>
